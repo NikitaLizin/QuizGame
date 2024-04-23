@@ -1,0 +1,281 @@
+*{
+  margin:0; 
+}
+
+header{
+  height:20vh; 
+  display:flex; 
+  justify-content:center; 
+  align-items:center;   
+}
+
+h1{
+  font-size:6rem;  
+  font-weight:bolder; 
+  color:#222831;
+}
+
+main{
+  height:80vh;
+  display:flex;
+  flex-direction:column; 
+  justify-content:flex-start;
+  align-items:center;
+}
+
+.scoreContainer{
+  background-color:#222831; 
+  border-radius:20px; 
+  display:none; 
+  grid-template-columns:4fr  2fr 1fr;   
+  width:50%; 
+  height:fit-content;  
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  padding-left:10px;
+  padding-right:10px;  
+  padding-bottom:20px; 
+}
+
+.table{
+  text-align: center; 
+}
+
+.score{
+  font-size: 4rem;
+  font-weight: bolder;
+  color:#222831;
+  display:flex; 
+}
+
+.lastFiveGamesContainer{
+  width:50%; 
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  height:fit-content; 
+  display:none; /* change to grid when u att the start screen */
+  grid-template-columns:1fr 1fr;
+  margin-top:10px; 
+  background-color:#222831;
+  border-radius:20px; 
+}
+
+.scoreBoardH2{
+  font-size:3rem; 
+  margin-top:50px; 
+  color:#222831;
+  display:none; 
+}
+
+.scoreBoardP{
+  margin:10px 0px 10px 0px; 
+  font-size:2.5rem; 
+  font-weight: bolder;
+  color:#EEEEEE;
+}
+
+
+.playAgainBtn:hover {
+  box-shadow: #00ADB5 0 0 0 3px, transparent 0 0 0 0;
+  color:#00ADB5;
+}
+
+.scoreSection{
+  display:none; 
+  width:50%; 
+  justify-content: center; 
+  margin-top:50px; 
+}
+
+.scoreText{
+  margin:50px 0px 0px 0px; 
+  color:#EEEEEE;
+  font-size:1.8rem;  
+  font-weight:bold; 
+}
+
+
+
+.start {
+  width:250px;
+  height:78px;  
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px,rgba(57, 62, 70,) 0 6px 20px;
+  box-sizing: border-box;
+  background-color:white;  
+  color: #00ADB5;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: Inter,sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.2rem; 
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s,-webkit-box-shadow .2s;
+  white-space: nowrap;
+  border:2px solid #00ADB5;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.start:hover {
+  box-shadow: #00ADB5 0 0 0 3px, transparent 0 0 0 0;
+  color:#00ADB5;
+}
+
+.quizContainer{ 
+  height:80%;
+  width:25%;   
+  border-radius:10px; 
+  display:none; /* grid when you press start*/
+  grid-template-rows:0.2fr 1fr 2fr;  
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+  background-color:white;
+}
+
+.topArea{
+  display:flex; 
+  justify-content:space-between; 
+  font-size:1.5rem; 
+  font-weight:bold;
+  padding:5px 5px 0px 5px;  
+}
+
+.questionArea{ 
+display:flex; 
+align-items:center; 
+justify-content: center;
+border-bottom:1px solid black; 
+font-size:2rem; 
+}
+
+h2{
+  margin:0px 20px 0px 20px; 
+}
+
+.optionsArea{
+  display:grid; 
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows:1fr 1fr; 
+}
+
+.optContainer{
+  display:flex; 
+  flex-direction:column; 
+  justify-content:center; 
+  align-items:center; 
+}
+
+.optText{
+  font-size:2rem;
+  margin-bottom:10px;  
+}
+
+.optBtn{
+  font-size:0; 
+  background-color:none; 
+  height:40px; 
+  width:40px; 
+  border-radius:50%;
+  border:none; 
+  background-color:white;
+  cursor: pointer;
+  border:1px solid black;  
+}
+
+.optBtn:hover {
+  background-color:#00ADB5;
+}
+
+.wrongBtn{
+  font-size:0; 
+  background-color:none; 
+  height:40px; 
+  width:40px; 
+  border-radius:50%;
+  border:none; 
+  background-color:#EEEEEE;
+  cursor: pointer;
+  border:1px solid black; 
+  background-color:red; 
+}
+
+.correctBtn{
+  font-size:0; 
+  background-color:none; 
+  height:40px; 
+  width:40px; 
+  border-radius:50%;
+  border:none; 
+  background-color:#EEEEEE;
+  cursor: pointer;
+  border:1px solid black; 
+  background-color:green; 
+}
+
+@media only screen and (max-width: 600px) {
+  h1{
+    font-size:4rem; 
+  }
+
+  .scoreBoardP{
+    font-size:1.5rem; 
+  }
+
+  .lastFiveGamesContainer{
+    width:80%;  
+  }
+
+  .quizContainer{
+    width:320px;  
+    height:500px; 
+  }
+
+  .questionTracker{
+    font-size: 1rem;
+  }
+
+  .question{
+    font-size:1.5rem; 
+  }
+
+  .optBtn{
+    width:20px; 
+    height:20px; 
+  }
+
+  .optText{
+    font-size:1.2rem; 
+  }
+
+  .wrongBtn,.correctBtn{
+    height:25px; 
+    width:25px; 
+  }
+
+  .score,.theScore{
+    font-size: 1.8rem;
+  }
+
+  .scoreText{
+    font-size:0.6rem; 
+    margin-top:15px; 
+  }
+
+  .scoreContainer{
+    width:95%; 
+    padding-left:0px; 
+  }
+
+  .scoreSection{
+    margin-top:20px; 
+  }
+
+
+  }
+

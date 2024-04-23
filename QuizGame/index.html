@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./styling.css" rel="stylesheet">
+  <title>QuizGame</title>
+</head>
+<body>
+<header>
+  <h1> QuizGame! </h1>
+</header>
+<main>
+  <!-- start Button-->
+  <button class="start" onclick="start()"> Start </button>
+  <!-- H2 for the last 5 games-->
+  <h2 class="scoreBoardH2"> Last 5 Games </h2>
+  <!-- container to keep results for the last five games -->
+  <div class="lastFiveGamesContainer"> 
+    <section class="timeAgo table">   </section>
+    <sections class="points table">  </sections>
+  </div> 
+  <!--container that keeps score of the current Session -->
+  <div class="scoreContainer">
+    <section class="questionContainer table"> </section>
+    <section class="answerContainer table"> </section>
+    <section class="valueContainer table"> </section>
+  </div>
+  <!-- Container where the score shows and play Again btn -->
+  <section class="scoreSection"> 
+    <h3 class="score"> Score: 
+      <p class="theScore">5/5</p> 
+    </h3> 
+  </section>
+  <!-- Container for the actual quiz display -->
+  <div class="quizContainer">
+    <!-- Top Area --> 
+    <section class="topArea"> <p class="questionTracker">1/10</p>  </section>
+    <!-- Question Area -->
+   <section class="questionArea"> <h2 class="question"> Question? </h2> </section>
+   <!-- Buttons and options Area -->
+    <section class="optionsArea"> 
+      <div class="opt1Container optContainer">
+        <p class="optText opt1" id="opt1"> option1</p>
+        <input type="submit" value="option1" class="optBtn optBtn1 " id="opt1">
+      </div>
+      <div class="opt2Container optContainer">
+        <p class="optText opt2" id="opt2"> option2</p>
+        <input type="submit" value="option2" class="optBtn optBtn2 " id="opt2">
+      </div>
+      <div class="opt3Container optContainer">
+        <p class="optText opt3" id="opt3"> option3</p>
+        <input type="submit" value="option3" class="optBtn opt3" id="opt3">
+      </div>
+      <div class="opt4Container optContainer">
+        <p class="optText opt4" id="opt4"> option4 </p>
+        <input type="submit" value="option4" class="optBtn opt4" id="opt4">
+      </div>
+    </section>
+  </div>
+</main>
+
+  <script src="./index.js"></script>
+</body>
+</html>
